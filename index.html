@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
 </head>
 
 <body class="body">
-    <div class="container">
+   
         <form class="form js-form">
             <fieldset class="form__fieldset">
                 <legend class="form__legend">Kalkulator walut</legend>
@@ -34,7 +34,7 @@
                 <p>
                     <label>
                         <span class="form__labelText">Przelicz na:</span>
-                        <select class="form__field js-foreignsCurrency" name="foreignCurrency">
+                        <select class="form__field js-foreignCurrency" name="foreignCurrency">
                             <option value="EUR">Euro</option>
                             <option value="USD">Dolar amerykański</option>
                             <option value="GBP">Funt brytyjski</option>
@@ -44,7 +44,7 @@
                 <p>
                     <label>
                         <span class="form__labelText">Kwota po przeliczeniu:</span>
-                        <input class="form__field js-amountAfterConvert" name="amountAfterConvert" type="number">
+                        <input class="form__field js-result" name="amountAfterConvert" type="number" disabled>
                     </label>
                 </p>
             </fieldset>
@@ -59,9 +59,9 @@
                 dnia
                 2023-01-09.
             </p>
+
+        </form>
    
-    </form>
-</div>
 </body>
 
 </html>

@@ -1,17 +1,18 @@
 console.log("Udanego kalkulowania");
 
 let amountInPlnElement = document.querySelector(".js-amountInPln");
-let foreignsCurrencyElement = document.querySelector(".js-foreignsCurrency");
-let amountAfterConvertElement = document.querySelector(".js-amountAfterConvert");
+let foreignCurrencyElement = document.querySelector(".js-foreignCurrency");
+let resultElement = document.querySelector(".js-result");
 let formElement = document.querySelector(".js-form");
 
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
 
     let amountInPln = amountInPlnElement.value; 
-    let foreignsCurrency = foreignsCurrencyElement.value;
+    let foreignCurrency = foreignCurrencyElement.value;
     let rate;
-    switch (foreignsCurrency) {
+
+    switch (foreignCurrency) {
         case "EUR":
             rate = 4.69;
             break;
@@ -21,8 +22,9 @@ formElement.addEventListener("submit", (event) => {
                 case "GBP":
                     rate = 5.35;
     }
-   let amountAfterConvert = amountInPln / rate;
-   amountAfterConvertElement.value = `${amountAfterConvert.toFixed(2)}`; 
+
+   let result = amountInPln / rate;
+   result.value = `${result.toFixed(2)}`; 
 });
 
 formElement.addEventListener("reset", () => {
