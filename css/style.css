@@ -1,0 +1,14 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after,
+   ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    font-family: 'Inter', sans-serif;
+    background-color: #3c2c19;
+    color: antiquewhite;
+}
