@@ -24,7 +24,7 @@ formElement.addEventListener("submit", (event) => {
     }
 
    let result = amountInPln / rate;
-   result.value = `${result.toFixed(2)}`; 
+   resultElement.value = `${result.toFixed(2)}`; 
 });
 
 formElement.addEventListener("reset", () => {
