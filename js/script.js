@@ -1,34 +1,59 @@
-console.log("Udanego kalkulowania");
+{
+    const welcome = () => {
+        console.log("Udanego kalkulowania");
+    }
+    welcome();
 
-let amountInPlnElement = document.querySelector(".js-amountInPln");
-let foreignCurrencyElement = document.querySelector(".js-foreignCurrency");
-let resultElement = document.querySelector(".js-result");
-let formElement = document.querySelector(".js-form");
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
 
-    let amountInPln = amountInPlnElement.value; 
-    let foreignCurrency = foreignCurrencyElement.value;
-    let rate;
 
-    switch (foreignCurrency) {
-        case "EUR":
-            rate = 4.69;
-            break;
+
+    const calculateResult = (amountInPln, foreignCurrency) => {
+        const rateEUR = 4.69;
+        const rateUSD = 4.40;
+        const rateGBP = 5.35;
+
+        switch (foreignCurrency) {
+            case "EUR":
+                return amountInPln / rateEUR;
             case "USD":
-                rate = 4.40;
-                break;
-                case "GBP":
-                    rate = 5.35;
+                return amountInPln / rateUSD;
+            case "GBP":
+                return amountInPln / rateGBP;
+        }
+    }
+    const updateResultText = (amountInPln, result, foreignCurrency) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.value = `${result.toFixed(2)}`;
+    }
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        const amountInPlnElement = document.querySelector(".js-amountInPln");
+        const foreignCurrencyElement = document.querySelector(".js-foreignCurrency");
+
+
+        const amountInPln = +amountInPlnElement.value;
+        const foreignCurrency = foreignCurrencyElement.value;
+
+        const result = calculateResult(amountInPln, foreignCurrency);
+
+        updateResultText(amountInPln, result, foreignCurrency);
     }
 
-   let result = amountInPln / rate;
-   resultElement.value = `${result.toFixed(2)}`; 
-});
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
 
-formElement.addEventListener("reset", () => {
-    console.log(`Formularz został zresetwowany.`);
-});
+        formElement.addEventListener("submit", onFormSubmit);
+        formElement.addEventListener("reset", () => {
+            console.log(`Formularz został zresetwowany.`);
+        });
+
+    }
+    init();
+    
+
+
+}
 
 

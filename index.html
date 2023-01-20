@@ -19,47 +19,48 @@
 </head>
 
 <body class="body">
-        <form class="form js-form">
-            <fieldset class="form__fieldset">
-                <legend class="form__legend">Kalkulator walut</legend>
-                <p>
-                    <label>
-                        <span class="form__labelText">Kwota w PLN*:</span>
-                        <input class="form__field js-amountInPln" name="amountInPln" type="number" min="1" step="any"
-                            required>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <span class="form__labelText">Przelicz na:</span>
-                        <select class="form__field js-foreignCurrency" name="foreignCurrency">
-                            <option value="EUR">Euro</option>
-                            <option value="USD">Dolar amerykański</option>
-                            <option value="GBP">Funt brytyjski</option>
-                        </select>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <span class="form__labelText">Kwota po przeliczeniu:</span>
-                        <input class="form__field js-result" name="amountAfterConvert" type="number" disabled>
-                    </label>
-                </p>
-            </fieldset>
-            <p>*Pole obowiązkowe</p>
-            <div>
-                <button class="form__button js-submit">Przelicz</button>
-            </div>
-            <div>
-                <button class="form__button js-reset" type="reset">Wyczyść</button>
-            </div>
-            <p class="form__paragraph">Kalkulator przelicza wartość dowolnie wybranych walut. Najnowsza tabela kursów średnich NBP pochodzi z
-                dnia
-                2023-01-09.
+    <form class="form js-form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">Kalkulator walut</legend>
+            <p>
+                <label>
+                    <span class="form__labelText">Kwota w PLN*:</span>
+                    <input class="form__field js-amountInPln" name="amountInPln" type="number" min="1" step="any"
+                        required>
+                </label>
             </p>
+            <p>
+                <label>
+                    <span class="form__labelText">Przelicz na:</span>
+                    <select class="form__field js-foreignCurrency" name="foreignCurrency">
+                        <option value="EUR">Euro</option>
+                        <option value="USD">Dolar amerykański</option>
+                        <option value="GBP">Funt brytyjski</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="form__labelText">Kwota po przeliczeniu:</span>
+                    <input class="form__field js-result" name="amountAfterConvert" type="number" disabled>
+                </label>
+            </p>
+        </fieldset>
+        <p>*Pole obowiązkowe</p>
+        <div>
+            <button class="form__button js-submit">Przelicz</button>
+        </div>
+        <div>
+            <button class="form__button js-reset" type="reset">Wyczyść</button>
+        </div>
+        <p class="form__paragraph">Kalkulator przelicza wartość dowolnie wybranych walut. Najnowsza tabela kursów
+            średnich NBP pochodzi z
+            dnia
+            2023-01-09.
+        </p>
 
-        </form>
-   
+    </form>
+
 </body>
 
 </html>
