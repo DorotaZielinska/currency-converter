@@ -1,7 +1,8 @@
 # Currency-Converter
-![Currency-Converter] (images/currencyConverterscreen.png)
+![Currency](images/currencyConverterscreen.png)
 ## Demo
 https://dorotazielinska.github.io/currency-converter/
+
 This application is easy to use, please type in the first field ("Kwota w PLN*") the amount in PLN, the next step is to choose one frome three available
 currences, which is in the second field ("Waluta") and last step is to check result by click "Przelicz".
 ## Description
