@@ -1,13 +1,4 @@
 {
-    const welcome = () => {
-        console.log("Udanego kalkulowania");
-    }
-    welcome();
-
-
-
-
-
     const calculateResult = (amountInPln, foreignCurrency) => {
         const rateEUR = 4.69;
         const rateUSD = 4.40;
@@ -28,19 +19,13 @@
     }
     const onFormSubmit = (event) => {
         event.preventDefault();
-
         const amountInPlnElement = document.querySelector(".js-amountInPln");
         const foreignCurrencyElement = document.querySelector(".js-foreignCurrency");
-
-
         const amountInPln = +amountInPlnElement.value;
         const foreignCurrency = foreignCurrencyElement.value;
-
         const result = calculateResult(amountInPln, foreignCurrency);
-
         updateResultText(amountInPln, result, foreignCurrency);
     }
-
     const init = () => {
         const formElement = document.querySelector(".js-form");
 
@@ -48,12 +33,12 @@
         formElement.addEventListener("reset", () => {
             console.log(`Formularz został zresetwowany.`);
         });
-
+        const welcome = () => {
+            console.log("Udanego kalkulowania");
+        }
+        welcome();
     }
     init();
-    
-
-
 }
 
 
