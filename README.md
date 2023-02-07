@@ -1,5 +1,5 @@
 # Currency-Converter
-![Currency](images/currencyConverterscreen.png)
+![Currency](images/screenshotcurrency.png)
 ## Demo
 https://dorotazielinska.github.io/currency-converter/
 
